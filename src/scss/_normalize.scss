@@ -16,7 +16,7 @@ html {
 body {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    color: $black;
+    color: #000;
 }
 
 a,
@@ -28,7 +28,7 @@ h2,
 h3,
 h4,
 h5 {
-    color: $black;
+    color: #000;
 }
 
 h1 {
@@ -60,34 +60,3 @@ a {
     /* Non-prefixed version, currently
                                     supported by Chrome, Opera and Firefox */
 }
-
-
-
-
-
-
-
-
-
-
-//Breakpoints
-
-// xxl
-@media (min-width: 1401px) {}
-
-// xl
-@media (max-width: 1400px) {}
-
-// lg
-@media (max-width: 1200px) {}
-
-// md
-@media (max-width: 992px) {}
-
-// sm
-@media (max-width: 768px) {}
-
-// none
-@media (max-width: 576px) {}
-
-@media (max-width: 380px) {}
