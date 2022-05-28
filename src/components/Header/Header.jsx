@@ -5,10 +5,10 @@ import logo from '../../assets/img/logo.svg';
 
 import SearchPanel from '../SearchPanel/SearchPanel';
 import { useDispatch, useSelector } from 'react-redux';
-import { scaleChange } from '../../redux/ScaleChange';
+import { scaleChange } from '../../redux/scaleChange';
 
 export default function Header() {
-	const scaleActive = useSelector(el => el.scaleActive);
+	const {activeScale} = useSelector(el => el.scaleChange);
 	const dispath = useDispatch();
 
 
@@ -37,13 +37,13 @@ export default function Header() {
 
                     <div className="col-3 offset-1">
                         <div onClick={changeScale} className="scale-change">
-							<span className={scaleActive ? 'scale-change__scale_active' : 'scale-change__scale'} >
+							<span className={activeScale ? 'scale-change__scale_active' : 'scale-change__scale'} >
 								°C
 							</span>
 							<span className="scale-change__scale_active">
 								|
 							</span>
-							<span className={scaleActive ? 'scale-change__scale' : 'scale-change__scale_active'} >
+							<span className={activeScale ? 'scale-change__scale' : 'scale-change__scale_active'} >
 								°F
 							</span>
 						</div>

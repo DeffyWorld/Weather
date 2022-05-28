@@ -1,10 +1,14 @@
 import { configureStore } from "@reduxjs/toolkit";
 
-import { scaleChangeSlice } from "./ScaleChange";
+import { scaleChangeSlice } from "./scaleChange";
+import { weatherSlice } from "./weather";
 
 
 const store = configureStore({
-    reducer: scaleChangeSlice.reducer
+    reducer: {
+        scaleChange: scaleChangeSlice.reducer,
+        weather: weatherSlice.reducer
+    },
 });
 
 

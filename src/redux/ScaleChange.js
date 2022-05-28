@@ -3,11 +3,11 @@ import { createSlice } from "@reduxjs/toolkit";
 export const scaleChangeSlice = createSlice({
     name: 'scaleChange',
     initialState: {
-        scaleActive: true
+        activeScale: true
     },
     reducers: {
         scaleChange: state => {
-            state.scaleActive = !state.scaleActive
+            state.activeScale = !state.activeScale
         }
     }
 });
