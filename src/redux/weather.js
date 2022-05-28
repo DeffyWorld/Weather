@@ -46,5 +46,3 @@ export const weatherSlice = createSlice({
         }
     }
 });
-
-// export const { setWeather } = weatherSlice.actions;

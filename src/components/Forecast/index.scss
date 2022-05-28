@@ -1,0 +1,55 @@
+.forecast {
+    min-height: 405px;
+}
+
+.main {
+    font-size: 1rem;
+    margin-top: 112px;
+    margin-left: 30%;
+    color: #343A40;
+    
+    &__title {
+        font-family: 'Roboto';
+        font-weight: 400;
+        font-size: 2em;
+    }
+    &__date {
+        font-family: 'Roboto';
+        font-weight: 400;
+        font-size: 1.2em;
+        margin-top: 0.5em;
+    }
+    &__temp {
+        font-family: 'Roboto';
+        font-weight: 500;
+        font-size: 6em;
+        margin-top: 0.17em;
+    }
+}
+
+.hourly-forecast {
+
+    &__item {
+        min-height: 161px;
+        margin-top: 112px;
+        margin-left: 10%;
+
+        &_time {
+            font-family: 'Roboto';
+            font-weight: 400;
+            font-size: 2em;
+        }
+        &_icon {
+            img {
+                width: 5em;
+                object-fit: cover;
+                margin-top: 0.7em;
+            }
+        }
+        &_temp {
+            font-family: 'Roboto';
+            font-weight: 400;
+            font-size: 2em;
+        }
+    }
+}

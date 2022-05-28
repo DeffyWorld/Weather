@@ -7,8 +7,7 @@ import SearchPanel from '../SearchPanel/SearchPanel';
 import { useDispatch, useSelector } from 'react-redux';
 import { scaleChange } from '../../redux/scaleChange';
 
-export default function Header() {
-	const {activeScale} = useSelector(el => el.scaleChange);
+export default function Header({activeScale}) {
 	const dispath = useDispatch();
 
 
@@ -32,7 +31,7 @@ export default function Header() {
                     </div>
 
                     <div className="col-6">
-                        <SearchPanel />
+                        {/* <SearchPanel /> */}
                     </div>
 
                     <div className="col-3 offset-1">
