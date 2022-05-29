@@ -30,8 +30,8 @@ export default function Now({weatherData, status}) {
                                             {el === 'Chance of Rain' &&
                                                 `${forecast
                                                     .forecastday[0]
-                                                    .day
-                                                    .daily_chance_of_rain}%`}
+                                                    .hour[+location.localtime.split(' ')[1].split(':')[0]]
+                                                    .chance_of_rain}%`}
                                             {el === 'Humidity' &&
                                                 `${forecast
                                                     .forecastday[0]
@@ -41,7 +41,7 @@ export default function Now({weatherData, status}) {
                                                 `${forecast
                                                     .forecastday[0]
                                                     .hour[+location.localtime.split(' ')[1].split(':')[0]]
-                                                    .wind_kph}k/h`}
+                                                    .wind_kph} km/h`}
                                             {el === 'Visiblity' &&
                                                 `${forecast
                                                     .forecastday[0]
@@ -51,7 +51,7 @@ export default function Now({weatherData, status}) {
                                                 `${forecast
                                                     .forecastday[0]
                                                     .hour[+location.localtime.split(' ')[1].split(':')[0]]
-                                                    .pressure_mb}hPa`}                
+                                                    .pressure_mb} hPa`}                
                                         </div>
                                     </div>
                                 </div>

@@ -1,0 +1,35 @@
+.table {
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 70px;
+
+    &__title {
+        font-family: 'Roboto';
+        font-weight: 400;
+        color: #343A40;
+        opacity: 0.8;
+        font-size: 1.5em;
+        text-align: center;
+        margin-bottom: 5px;
+        margin-left: -20%;
+    }
+    &__value {
+        font-family: 'Roboto';
+        font-weight: 300;
+        color: #343A40;
+        font-size: 1em;
+        text-align: center;
+        font-size: 1.2em;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: -20%;
+    }
+    &__line {
+        max-width: 1230px;
+        height: 1px;
+        background: #343A40;
+        margin: auto;
+    }
+}
