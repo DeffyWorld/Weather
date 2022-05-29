@@ -8,9 +8,9 @@ export const fetchWeather = createAsyncThunk(
     async function(_, {rejectWithValue}) {
         try {
             const data = await axios.get(
-                'https://api.weatherapi.com/v1/forecast.json?key=a3aa285bc09643788a0131738222505&q=London&days=7&aqi=no&alerts=no'
+                'https://api.weatherapi.com/v1/forecast.json?key=a3aa285bc09643788a0131738222505&q=London&days=4&aqi=no&alerts=no'
             )
-            if (data.statusText !== 'OK') {
+            if (data.statusText === 'Not Found') {
                 throw new Error(`Server error! Status: ${data.status}`);
             }
 
