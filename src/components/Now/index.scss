@@ -1,0 +1,35 @@
+.now {
+    min-height: 178px;
+    background-color: #343A40;
+    font-size: 1rem;
+
+    &__title {
+        font-family: 'Roboto';
+        font-weight: 700;
+        font-size: 1.2em;
+        color: #FFFFFF;
+        margin-top: 20px;
+    }
+    &-item {
+        display: flex;
+        flex-direction: column;
+        min-height: 178px;
+        justify-content: center;
+        align-items: center;
+
+        &__title {
+            font-family: 'Roboto';
+            font-weight: 400;
+            color: #FFFFFF;
+            opacity: 0.8;
+            font-size: 1.1em;
+        }
+        &__value {
+            font-family: 'Roboto';
+            font-weight: 700;
+            color: #FFFFFF;
+            font-size: 1.5em;
+            margin-top: 0.7em;
+        }
+    }
+}

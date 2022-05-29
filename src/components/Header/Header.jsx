@@ -3,8 +3,7 @@ import React from 'react'
 import './index.scss';
 import logo from '../../assets/img/logo.svg';
 
-import SearchPanel from '../SearchPanel/SearchPanel';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { scaleChange } from '../../redux/scaleChange';
 
 export default function Header({activeScale}) {

@@ -3,16 +3,16 @@ import React from 'react'
 import './index.scss';
 
 
-export default function Main({weatherData, status, error, activeScale}) {
+export default function Main({weatherData, status, activeScale}) {
     const {location, forecast, current} = weatherData;
-    let days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     
 
 	return (
         <section className="forecast">
             <div className="container">
 
-                {location && (
+                {status === 'resolved' && (
                     <div className="row">
 
                         <div className="col-3">
@@ -38,8 +38,8 @@ export default function Main({weatherData, status, error, activeScale}) {
                                     .forecastday[0]
                                     .hour[+location.localtime.split(' ')[1].split(':')[0]+1] &&
 
-                                <div className="hourly-forecast__item">
-                                    <div className="hourly-forecast__item_time">
+                                <div className="hourly-forecast-item">
+                                    <div className="hourly-forecast-item_time">
                                         {
                                             forecast
                                                 .forecastday[0]
@@ -47,7 +47,7 @@ export default function Main({weatherData, status, error, activeScale}) {
                                                 .time.split(' ')[1]
                                         }
                                     </div>
-                                    <div className="hourly-forecast__item_icon">
+                                    <div className="hourly-forecast-item_icon">
                                         <img src={
                                             forecast
                                                 .forecastday[0]
@@ -56,7 +56,7 @@ export default function Main({weatherData, status, error, activeScale}) {
                                                 .icon
                                         } alt="#" />
                                     </div>
-                                    <div className="hourly-forecast__item_temp">
+                                    <div className="hourly-forecast-item_temp">
                                         {
                                             activeScale ? 
                                             forecast
@@ -80,8 +80,8 @@ export default function Main({weatherData, status, error, activeScale}) {
                                     .forecastday[0]
                                     .hour[+location.localtime.split(' ')[1].split(':')[0]+2] &&
 
-                                <div className="hourly-forecast__item">
-                                    <div className="hourly-forecast__item_time">
+                                <div className="hourly-forecast-item">
+                                    <div className="hourly-forecast-item_time">
                                         {
                                             forecast
                                                 .forecastday[0]
@@ -89,7 +89,7 @@ export default function Main({weatherData, status, error, activeScale}) {
                                                 .time.split(' ')[1]
                                         }
                                     </div>
-                                    <div className="hourly-forecast__item_icon">
+                                    <div className="hourly-forecast-item_icon">
                                         <img src={
                                             forecast
                                                 .forecastday[0]
@@ -98,7 +98,7 @@ export default function Main({weatherData, status, error, activeScale}) {
                                                 .icon
                                         } alt="#" />
                                     </div>
-                                    <div className="hourly-forecast__item_temp">
+                                    <div className="hourly-forecast-item_temp">
                                         {
                                             activeScale ? 
                                             forecast
@@ -122,8 +122,8 @@ export default function Main({weatherData, status, error, activeScale}) {
                                     .forecastday[0]
                                     .hour[+location.localtime.split(' ')[1].split(':')[0]+3] &&
 
-                                    <div className="hourly-forecast__item">
-                                    <div className="hourly-forecast__item_time">
+                                    <div className="hourly-forecast-item">
+                                    <div className="hourly-forecast-item_time">
                                         {
                                             forecast
                                                 .forecastday[0]
@@ -131,7 +131,7 @@ export default function Main({weatherData, status, error, activeScale}) {
                                                 .time.split(' ')[1]
                                         }
                                     </div>
-                                    <div className="hourly-forecast__item_icon">
+                                    <div className="hourly-forecast-item_icon">
                                         <img src={
                                             forecast
                                                 .forecastday[0]
@@ -140,7 +140,7 @@ export default function Main({weatherData, status, error, activeScale}) {
                                                 .icon
                                         } alt="#" />
                                     </div>
-                                    <div className="hourly-forecast__item_temp">
+                                    <div className="hourly-forecast-item_temp">
                                         {
                                             activeScale ? 
                                             forecast
@@ -164,8 +164,8 @@ export default function Main({weatherData, status, error, activeScale}) {
                                     .forecastday[0]
                                     .hour[+location.localtime.split(' ')[1].split(':')[0]+4] &&
 
-                                    <div className="hourly-forecast__item">
-                                    <div className="hourly-forecast__item_time">
+                                    <div className="hourly-forecast-item">
+                                    <div className="hourly-forecast-item_time">
                                         {
                                             forecast
                                                 .forecastday[0]
@@ -173,7 +173,7 @@ export default function Main({weatherData, status, error, activeScale}) {
                                                 .time.split(' ')[1]
                                         }
                                     </div>
-                                    <div className="hourly-forecast__item_icon">
+                                    <div className="hourly-forecast-item_icon">
                                         <img src={
                                             forecast
                                                 .forecastday[0]
@@ -182,7 +182,7 @@ export default function Main({weatherData, status, error, activeScale}) {
                                                 .icon
                                         } alt="#" />
                                     </div>
-                                    <div className="hourly-forecast__item_temp">
+                                    <div className="hourly-forecast-item_temp">
                                         {
                                             activeScale ? 
                                             forecast
