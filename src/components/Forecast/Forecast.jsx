@@ -1,6 +1,7 @@
 import React from 'react'
-
 import './index.scss';
+
+import ContentLoader from "react-content-loader"
 
 
 export default function Main({weatherData, status, activeScale}) {
@@ -12,7 +13,18 @@ export default function Main({weatherData, status, activeScale}) {
         <section className="forecast">
             <div className="container">
 
-                {status === 'resolved' && (
+                {status !== 'resolved' && status !== 'rejected' ? 
+                    (<ContentLoader 
+                        speed={2}
+                        width={1440}
+                        height={405}
+                        viewBox="0 0 1440 405"
+                        backgroundColor="#f3f3f3"
+                        foregroundColor="#ecebeb"
+                    >
+                        <rect x="100" y="112" rx="0" ry="0" width="256" height="177" /> 
+                        <rect x="503" y="120" rx="0" ry="0" width="837" height="161" /> 
+                      </ContentLoader>) : status === 'resolved' && (
                     <div className="row">
 
                         <div className="col-3">
